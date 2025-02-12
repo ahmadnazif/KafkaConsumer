@@ -4,9 +4,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace KafkaConsumer.Workers;
 
-public class KafkaConsumerWorker(ILogger<KafkaConsumerWorker> logger, ConsumerConfig consumerConfig, IConfiguration config) : BackgroundService
+public class ConsumerWorker(ILogger<ConsumerWorker> logger, ConsumerConfig consumerConfig, IConfiguration config) : BackgroundService
 {
-    private readonly ILogger<KafkaConsumerWorker> logger = logger;
+    private readonly ILogger<ConsumerWorker> logger = logger;
     private readonly string topic = config["Kafka:Topic"];
     private readonly ConsumerConfig consumerConfig = consumerConfig;
 

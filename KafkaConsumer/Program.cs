@@ -18,7 +18,7 @@ builder.Services.AddSingleton(sp =>
     return clientConfig;
 });
 
-builder.Services.AddHostedService<KafkaConsumerWorker>();
+builder.Services.AddHostedService<ConsumerWorker>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
